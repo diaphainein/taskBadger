@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "dev",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "root",
+    "database": "test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "b769678eec7c52",
+    "password": "3ed6b33c",
+    "database": "production",
+    "host": "us-cdbr-iron-east-03.cleardb.net",
+    "dialect": "mysql"
+  }
+}

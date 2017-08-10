@@ -1,0 +1,80 @@
+<div class="wrapper">
+		<div class="main">
+			<div class="section section-basic">
+				<div class="container">
+					<div class="title">
+						<h2></h2>
+					</div>
+
+					<!-- Active Task List -->
+					<div>
+						<table class="table table-striped">
+						
+							<thead>
+								<tr>
+									<th>Task</th>
+									<th></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+
+							{{#each tasks}}
+								<tr>
+									<td>{{this.task}}</td>
+									<td>
+										<div class="checkbox text-right">
+											<label>
+												<input type="checkbox" name="optionsCheckboxes">Done
+											</label>
+										</div>
+									</td>
+									<td class="text-right">
+										<button type="button" class="btn btn-link btn-xs">Edit</button>
+									</td>
+								</tr>
+								{{/each}}
+								
+							</tbody>
+						</table>
+					</div>
+
+					<!-- Adding a New Task Form Group -->
+					<form method = "POST" action = "/create">
+						<div class="form-group">
+							<label for="add-a-task"></label>
+							<input type="taskname" class="form-control" id="inputDateTime1" placeholder="Add a Task">
+						</div>
+						<div class="form-group">
+							<input type="text" class="datepicker form-control" data-field="datetime"placeholder="Pick a Date" value="" />
+						</div>
+						<div id="dtBox"></div>
+						<button type="submit" class="btn btn-default btn-success">Add Task</button>
+					</form>
+					<br>
+
+					<!-- Task History Section -->
+					<div class="">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Task History</th>
+									<th></th>
+									<th class="text-right">Clear All</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Jump out of a boat</td>
+									<td>
+										<button type="button" class="btn btn-link btn-xs">ReUse</button>
+									</td>
+									<td class="text-right">
+										<button type="button" class="btn btn-link btn-xs">Clear</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+					
